@@ -54,7 +54,7 @@ const WeddingInvitation = () => {
         
         {/* Header Section */}
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6 mt-10">
             Бракосочетание Андрея и Элеоноры
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-pink-400 mx-auto rounded-full"></div>
@@ -314,8 +314,8 @@ const WeddingInvitation = () => {
               { time: '15:00', event: 'Торжественная регистрация (Парк, под открытым небом около банкетного зала "Селебрити")' },
               { time: '16:00', event: 'Фуршет (В это время молодожёны уходят на фотосессию)' },
               { time: '17:30', event: 'Банкет' },
-              { time: '', event: 'Торт' },
-              { time: '', event: 'Завершение' }
+              { time: '21:00', event: 'Торт' },
+              { time: '23:00', event: 'Завершение' }
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
                 <div className="flex-shrink-0 w-20 min-w-20">
@@ -326,7 +326,6 @@ const WeddingInvitation = () => {
                 <div className="flex-1">
                   <span className="text-gray-800">{item.event}</span>
                 </div>
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
               </div>
             ))}
           </div>
