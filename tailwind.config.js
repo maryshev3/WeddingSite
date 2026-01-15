@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'TildaScriptRegular': ['TildaScriptRegular', 'serif'],
+        'CormorantInfantLite': ['CormorantInfantLite', 'serif'],
+        'CormorantInfantBold': ['CormorantInfantBold', 'serif']
       }
     },
   },

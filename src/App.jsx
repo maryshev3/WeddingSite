@@ -55,78 +55,126 @@ const WeddingInvitation = () => {
         <div className="shadow-lg p-8 relative" style={{ backgroundColor: '#c4d8ed' }}>
           <div className="flex flex-col items-center justify-center gap-8">
             
-            {/* Левое сердечко вверху от первой картинки */}
-            <img 
-              src="src/assets/heart_new.png" 
-              alt="Сердечко" 
-              className="absolute top-2 -left-16 w-16 h-16"
-            />
-            
+            {/* Блок Андрея с сердечком вверху */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
+              <img 
+                src="src/assets/heart_new.png" 
+                alt="Сердечко" 
+                className="absolute w-12 h-12 -left-20 top-4 z-20"
+              />
               <img src="src/assets/man_child.png" alt="Андрей" className="w-60 h-60"/>
-              <p className="text-gray-700 text-4xl mt-4 font-TildaScriptRegular">Андрей</p>
+              <p className="text-4xl mt-4 font-TildaScriptRegular">Андрей</p>
             </div>
             
             <div className="flex items-center justify-center my-0 md:my-0">
-              <p className="text-gray-700 text-8xl font-TildaScriptRegular">+</p>
+              <p className="text-8xl font-TildaScriptRegular">+</p>
             </div>
             
+            {/* Блок Элеоноры с сердечком внизу */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
+              <img 
+                src="src/assets/heart_new.png" 
+                alt="Сердечко" 
+                className="absolute w-12 h-12 -right-20 bottom-4 z-20"
+              />
               <img src="src/assets/girl_child.png" alt="Элеонора" className="w-60 h-60"/>
-              <p className="text-gray-700 text-4xl mt-4 font-TildaScriptRegular">Элеонора</p>
+              <p className="text-4xl mt-4 font-TildaScriptRegular">Элеонора</p>
             </div>
             
-            {/* Правое сердечко внизу от второй картинки */}
-            <img 
-              src="src/assets/heart_new.png" 
-              alt="Сердечко" 
-              className="absolute bottom-2 -right-12 w-16 h-16"
-            />
+            <div className="flex items-center justify-center my-0 md:my-0">
+              <p className="text-5xl font-TildaScriptRegular">А + Э = ♡︎</p>
+            </div>
+
+            <div className="text-center">
+              <p className="font-CormorantInfantBold text-5xl mb-8 leading-relaxed tracking-wider">
+                МЫ СОЗРЕЛИ ДЛЯ ЭТОГО МОМЕНТА <br />
+                <span className="font-bold">15 мая 2026 г.</span>
+              </p>
+
+              {/* Countdown */}
+              <div className="mb-8">
+                <div className="flex justify-center gap-16 flex-wrap">
+                  {Object.entries(timeLeft).map(([unit, value]) => {
+                    // Русские названия
+                    const labels = {
+                      days: 'дней',
+                      hours: 'часов', 
+                      minutes: 'минут',
+                      seconds: 'секунд'
+                    };
+                    
+                    return (
+                      <div key={unit} className="text-center">
+                        <div className="bg-transparent flex flex-col items-center justify-center">
+                          <span className="text-5xl font-semibold font-CormorantInfantBold">{value}</span>
+                          <span className="text-xl font-CormorantInfantBold">{labels[unit] || unit.slice(0, -1)}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
 
         {/* Main Message */}
-        <div className="bg-white shadow-lg p-8 text-center">
-          <p className="text-2xl md:text-3xl font-serif text-gray-800 mb-8 leading-relaxed">
-            Мы созрели для этого момента<br />
-            <span className="text-blue-600 font-bold">15 мая 2026 г.</span>
-          </p>
-
-          {/* Countdown */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center mb-6">
-              <Clock className="w-6 h-6 text-blue-600 mr-2" />
-              <h3 className="text-xl font-semibold text-gray-800">До свадьбы осталось:</h3>
-            </div>
-            <div className="flex justify-center gap-4 flex-wrap">
-              {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="text-center">
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg w-16 h-16 md:w-20 md:h-20 flex flex-col items-center justify-center shadow-md">
-                    <span className="text-2xl md:text-3xl font-bold">{value}</span>
-                    <span className="text-xs md:text-sm opacity-90 capitalize">{unit.slice(0, -1)}</span>
-                  </div>
+        <div className="bg-[url('/src/assets/background_image.webp')] bg-cover bg-center bg-no-repeat shadow-lg p-8 text-center relative min-h-[500px]">
+          <div className="bg-white mx-8 md:mx-auto my-8 md:my-16 max-w-4xl p-8 rounded-2xl shadow-2xl relative z-10">
+            {/* Invitation Text */}
+            <div className="text-center">
+              <h2 className="text-4xl font-TildaScriptRegular mb-6">Дорогой Гость!</h2>
+              <p className="text-2xl font-CormorantInfantLite mb-6">
+                Мы рады сообщить Вам, что <span className="font-semibold">15.05.2026</span> состоится самое главное торжество в нашей жизни — день нашей свадьбы!
+                Приглашаем Вас разделить с нами радость этого незабываемого дня.
+              </p>
+              <p className="text-2xl font-CormorantInfantLite mb-6">
+                15.05.2026 в 15:00 Банкетный зал "Селебрити"
+                Энзелийская улица, 1а
+              </p>
+              <div className="flex justify-center mb-6">
+                <img 
+                  src="src/assets/photo_both.jpg" 
+                  alt="Фото" 
+                  className="w-full max-w-md"
+                />
+              </div>
+              <p className="text-4xl font-CormorantInfantLite mb-6">
+                ПОДТВЕРЖДЕНИЕ
+              </p>
+              <p className="text-2xl font-CormorantInfantLite mb-12">
+                Пожалуйста подтвердите свое присутствие до 20.04.2026
+              </p>
+              <p className="text-4xl font-TildaScriptRegular mb-6">
+                Ждём Вас на нашей свадьбе!
+              </p>
+              <div className="my-6">
+                <p className="text-2xl font-CormorantInfantLite mb-6">
+                  Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  {[
+                    { color: '#000000', name: 'Черный' },
+                    { color: '#435571', name: 'Темно-синий' },
+                    { color: '#98ADD1', name: 'Голубой' },
+                    { color: '#E7B87C', name: 'Бежевый' },
+                    { color: '#8F5F40', name: 'Коричневый' }
+                  ].map((item, index) => (
+                    <div key={index} className="text-center">
+                      <div 
+                        className="w-16 h-16 rounded-full shadow-md mx-auto mb-3"
+                        style={{ backgroundColor: item.color }}
+                      ></div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Invitation Text */}
-          <div className="text-left md:text-center">
-            <h2 className="text-2xl md:text-3xl font-serif text-gray-800 mb-6">Дорогой Гость!</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Мы рады сообщить Вам, что <span className="font-semibold">15.05.2026</span> состоится самое главное торжество в нашей жизни — день нашей свадьбы!
-              Приглашаем Вас разделить с нами радость этого незабываемого дня.
-            </p>
-            <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-xl max-w-md mx-auto">
-              <Calendar className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-              <div className="text-center md:text-left">
-                <p className="font-semibold text-gray-800">15.05.2026 в 15:00</p>
-                <p className="text-gray-700">Банкетный зал "Селебрити"</p>
-                <p className="text-gray-700">Петровская набережная, Энзелийская улица, 1а</p>
               </div>
             </div>
           </div>
         </div>
+
 
         {/* Couple Photo */}
         <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
