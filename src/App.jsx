@@ -48,43 +48,45 @@ const WeddingInvitation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200">
+    <div className="">
       {/* Main Container - Centered Content */}
-      <div className="w-full space-y-8">
-        
-        {/* Header Section */}
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6 mt-10">
-            Бракосочетание Андрея и Элеоноры
-          </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-pink-400 mx-auto rounded-full"></div>
-        </div>
-
+      <div className="">
         {/* Childhood Photos Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="text-center">
-              <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full flex items-center justify-center shadow-lg mx-auto mb-4">
-                <span className="text-6xl">👦</span>
-              </div>
-              <p className="font-semibold text-gray-700 text-lg">Андрей</p>
+        <div className="shadow-lg p-8 relative" style={{ backgroundColor: '#c4d8ed' }}>
+          <div className="flex flex-col items-center justify-center gap-8">
+            
+            {/* Левое сердечко вверху от первой картинки */}
+            <img 
+              src="src/assets/heart_new.png" 
+              alt="Сердечко" 
+              className="absolute top-2 -left-16 w-16 h-16"
+            />
+            
+            <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
+              <img src="src/assets/man_child.png" alt="Андрей" className="w-60 h-60"/>
+              <p className="text-gray-700 text-4xl mt-4 font-TildaScriptRegular">Андрей</p>
             </div>
             
-            <div className="flex items-center justify-center my-4 md:my-0">
-              <Heart className="w-12 h-12 text-pink-500 animate-pulse" />
+            <div className="flex items-center justify-center my-0 md:my-0">
+              <p className="text-gray-700 text-8xl font-TildaScriptRegular">+</p>
             </div>
             
-            <div className="text-center">
-              <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full flex items-center justify-center shadow-lg mx-auto mb-4">
-                <span className="text-6xl">👧</span>
-              </div>
-              <p className="font-semibold text-gray-700 text-lg">Элеонора</p>
+            <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
+              <img src="src/assets/girl_child.png" alt="Элеонора" className="w-60 h-60"/>
+              <p className="text-gray-700 text-4xl mt-4 font-TildaScriptRegular">Элеонора</p>
             </div>
+            
+            {/* Правое сердечко внизу от второй картинки */}
+            <img 
+              src="src/assets/heart_new.png" 
+              alt="Сердечко" 
+              className="absolute bottom-2 -right-12 w-16 h-16"
+            />
           </div>
         </div>
 
         {/* Main Message */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+        <div className="bg-white shadow-lg p-8 text-center">
           <p className="text-2xl md:text-3xl font-serif text-gray-800 mb-8 leading-relaxed">
             Мы созрели для этого момента<br />
             <span className="text-blue-600 font-bold">15 мая 2026 г.</span>
