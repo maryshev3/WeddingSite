@@ -175,189 +175,30 @@ const WeddingInvitation = () => {
           </div>
         </div>
 
-
-        {/* Couple Photo */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-          <div className="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-blue-300 to-pink-300 rounded-full flex items-center justify-center shadow-2xl mx-auto mb-6">
-            <span className="text-8xl">💑</span>
+        {/* Quizzes */}
+        <div className="shadow-lg p-8 relative" style={{ backgroundColor: '#c4d8ed' }}>
+          <div className="text-center p-6" style={{ backgroundColor: '#d6e7f3', borderLeft: '6px solid #f4633e' }}>
+            <p className="text-xl">Пожалуйста, ответьте на вопросы, которые для вас подготовили <strong>Жених</strong> и <strong>Невеста</strong>:</p>
           </div>
-          <p className="text-xl font-serif text-gray-700 italic">Андрей & Элеонора</p>
+          
+          <script src="https://forms.yandex.ru/_static/embed.js"></script>
+          <iframe
+            className="block mx-auto"
+            src="https://forms.yandex.ru/u/696a1f92e010db2c0342596e?iframe=1"
+            frameborder="0"
+            name="ya-form-696a1f92e010db2c0342596e"
+            width="650"
+            height="1150" />
         </div>
 
-        {/* RSVP Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-serif text-gray-800 mb-4">Подтверждение</h3>
-            <p className="text-gray-600">Пожалуйста, подтвердите свое присутствие до <span className="font-semibold">20.04.2026</span></p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Question 1 */}
-            <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
-                Планируете ли вы быть на свадьбе?
-              </label>
-              <div className="flex flex-wrap gap-4 justify-center">
-                {['Да', 'Нет'].map(option => (
-                  <label key={option} className="inline-flex items-center cursor-pointer">
-                    <input
-                      type="radio"
-                      name="attendance"
-                      value={option}
-                      checked={responses.attendance === option}
-                      onChange={(e) => handleResponseChange('attendance', e.target.value)}
-                      className="sr-only"
-                    />
-                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center mr-2 ${
-                      responses.attendance === option 
-                        ? 'border-blue-600 bg-blue-600' 
-                        : 'border-gray-300'
-                    }`}>
-                      {responses.attendance === option && (
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                      )}
-                    </div>
-                    <span className="text-gray-700">{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Question 2 */}
-            <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
-                Какой алкоголь вы предпочитаете?
-              </label>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {['Красное вино', 'Белое вино', 'Шампанское', 'Коньяк/виски', 'Не буду пить'].map(option => (
-                  <button
-                    key={option}
-                    type="button"
-                    onClick={() => handleResponseChange('alcohol', option)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                      responses.alcohol === option
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Question 3 */}
-            <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
-                Потребуется ли вам трансфер?
-              </label>
-              <div className="flex flex-wrap gap-4 justify-center">
-                {['Да', 'Нет'].map(option => (
-                  <label key={option} className="inline-flex items-center cursor-pointer">
-                    <input
-                      type="radio"
-                      name="transfer"
-                      value={option}
-                      checked={responses.transfer === option}
-                      onChange={(e) => handleResponseChange('transfer', e.target.value)}
-                      className="sr-only"
-                    />
-                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center mr-2 ${
-                      responses.transfer === option 
-                        ? 'border-blue-600 bg-blue-600' 
-                        : 'border-gray-300'
-                    }`}>
-                      {responses.transfer === option && (
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                      )}
-                    </div>
-                    <span className="text-gray-700">{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Question 4 */}
-            <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
-                Нуждаетесь ли вы в жилье?
-              </label>
-              <div className="flex flex-wrap gap-4 justify-center">
-                {['Да', 'Нет'].map(option => (
-                  <label key={option} className="inline-flex items-center cursor-pointer">
-                    <input
-                      type="radio"
-                      name="accommodation"
-                      value={option}
-                      checked={responses.accommodation === option}
-                      onChange={(e) => handleResponseChange('accommodation', e.target.value)}
-                      className="sr-only"
-                    />
-                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center mr-2 ${
-                      responses.accommodation === option 
-                        ? 'border-blue-600 bg-blue-600' 
-                        : 'border-gray-300'
-                    }`}>
-                      {responses.accommodation === option && (
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                      )}
-                    </div>
-                    <span className="text-gray-700">{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div className="text-center pt-4">
-              <button
-                type="submit"
-                disabled={!responses.attendance}
-                className="bg-gradient-to-r from-blue-600 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Отправить ответ
-              </button>
-            </div>
-          </form>
-        </div>
-
-        {/* Final Message */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-          <p className="text-2xl font-serif text-gray-800 mb-4">Ждем Вас на нашей свадьбе!</p>
-          <Sparkles className="w-8 h-8 text-yellow-400 mx-auto" />
-        </div>
-
-        {/* Dress Code */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-serif text-gray-800 text-center mb-6">
-            Дресс-код
-          </h3>
-          <p className="text-gray-700 text-center mb-6">
-            Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры:
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            {[
-              { color: '#000000', name: 'Черный' },
-              { color: '#435571', name: 'Темно-синий' },
-              { color: '#98ADD1', name: 'Голубой' },
-              { color: '#E7B87C', name: 'Бежевый' },
-              { color: '#8F5F40', name: 'Коричневый' }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div 
-                  className="w-16 h-16 rounded-full shadow-md mx-auto mb-3 border-2 border-white"
-                  style={{ backgroundColor: item.color }}
-                ></div>
-                <span className="text-sm text-gray-600 block">{item.name}</span>
-              </div>
-            ))}
-          </div>
+        {/* Wedding plan */}
+        <div className="bg-[url('/src/assets/background_image.webp')] bg-cover bg-center bg-no-repeat p-8 text-center relative min-h-[100px]">
         </div>
 
         {/* Wedding Schedule */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-serif text-gray-800 text-center mb-8">
-            Свадебное расписание
-          </h3>
+        <div className="p-8" style={{ backgroundColor: '#e3d8f1' }}>
+          <h2 className="text-4xl font-TildaScriptRegular mb-6 text-center">Свадебное расписание</h2>
+
           <div className="space-y-4 max-w-2xl mx-auto">
             {[
               { time: '14:30', event: 'Сбор гостей' },
@@ -367,23 +208,23 @@ const WeddingInvitation = () => {
               { time: '21:00', event: 'Торт' },
               { time: '23:00', event: 'Завершение' }
             ].map((item, index) => (
-              <div key={index} className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
+              <div key={index} className="flex items-start gap-16 p-4">
                 <div className="flex-shrink-0 w-20 min-w-20">
                   {item.time && (
-                    <span className="text-blue-600 font-semibold block text-center">{item.time}</span>
+                    <span className="text-2xl font-CormorantInfantBold block text-left">{item.time}</span>
                   )}
                 </div>
                 <div className="flex-1">
-                  <span className="text-gray-800">{item.event}</span>
+                  <span className="text-2xl font-CormorantInfantBold">{item.event}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Карта */}
+        {/* Map */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-serif text-gray-800 text-center mb-6">
+          <h3 className="text-4xl font-CormorantInfantBold text-center mb-6">
             Где нас найти?
           </h3>
           <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
@@ -399,15 +240,8 @@ const WeddingInvitation = () => {
               title="Свадьба Андрея и Элеоноры"
             ></iframe>
           </div>
-          <p className="text-center text-gray-600 mt-4">
-            Банкетный зал "Селебрити", Петровская набережная, Энзелийская ул., 1а
-          </p>
-        </div>
-
-        {/* Footer */}
-        <div className="text-center pb-8">
-          <p className="text-gray-500 font-serif italic text-lg">
-            С любовью, Андрей и Элеонора 💙
+          <p className="text-center text-2xl font-CormorantInfantLite mt-4">
+            Банкетный зал "Селебрити", Энзелийская ул., 1а
           </p>
         </div>
       </div>
