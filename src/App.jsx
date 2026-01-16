@@ -178,7 +178,7 @@ const WeddingInvitation = () => {
             frameborder="0"
             width="80%"
             name="ya-form-696a1f92e010db2c0342596e"
-            height="1150" />
+            height="1170" />
         </div>
 
         {/* Wedding plan */}
