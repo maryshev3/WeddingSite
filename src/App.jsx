@@ -58,11 +58,11 @@ const WeddingInvitation = () => {
             {/* Блок Андрея с сердечком вверху */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
               <img 
-                src="src/assets/heart_new.png" 
+                src="images/heart_new.png" 
                 alt="Сердечко" 
                 className="absolute w-12 h-12 -left-20 top-4 z-20"
               />
-              <img src="src/assets/man_child.png" alt="Андрей" className="w-60 h-60"/>
+              <img src="images/man_child.png" alt="Андрей" className="w-60 h-60"/>
               <p className="text-4xl mt-4 font-TildaScriptRegular">Андрей</p>
             </div>
             
@@ -73,11 +73,11 @@ const WeddingInvitation = () => {
             {/* Блок Элеоноры с сердечком внизу */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
               <img 
-                src="src/assets/heart_new.png" 
+                src="images/heart_new.png" 
                 alt="Сердечко" 
                 className="absolute w-12 h-12 -right-20 bottom-4 z-20"
               />
-              <img src="src/assets/girl_child.png" alt="Элеонора" className="w-60 h-60"/>
+              <img src="images/girl_child.png" alt="Элеонора" className="w-60 h-60"/>
               <p className="text-4xl mt-4 font-TildaScriptRegular">Элеонора</p>
             </div>
             
@@ -120,7 +120,7 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Main Message */}
-        <div className="bg-[url('/src/assets/background_image.webp')] bg-cover bg-center bg-no-repeat shadow-lg p-8 text-center relative min-h-[500px]">
+        <div className="bg-[url('/images/background_image.webp')] bg-cover bg-center bg-no-repeat shadow-lg p-8 text-center relative min-h-[500px]">
           <div className="bg-white mx-8 md:mx-auto my-8 md:my-16 max-w-4xl p-8 rounded-2xl shadow-2xl relative z-10">
             {/* Invitation Text */}
             <div className="text-center">
@@ -135,7 +135,7 @@ const WeddingInvitation = () => {
               </p>
               <div className="flex justify-center mb-6">
                 <img 
-                  src="src/assets/photo_both.jpg" 
+                  src="images/photo_both.jpg" 
                   alt="Фото" 
                   className="w-full max-w-md"
                 />
@@ -192,7 +192,7 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Wedding plan */}
-        <div className="bg-[url('/src/assets/background_image.webp')] bg-cover bg-center bg-no-repeat p-8 text-center relative min-h-[100px]">
+        <div className="bg-[url('/images/background_image.webp')] bg-cover bg-center bg-no-repeat p-8 text-center relative min-h-[100px]">
         </div>
 
         {/* Wedding Schedule */}
