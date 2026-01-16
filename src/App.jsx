@@ -187,7 +187,7 @@ const WeddingInvitation = () => {
             src="https://forms.yandex.ru/u/696a1f92e010db2c0342596e?iframe=1"
             frameborder="0"
             name="ya-form-696a1f92e010db2c0342596e"
-            width="650"
+            width="80%"
             height="1150" />
         </div>
 
