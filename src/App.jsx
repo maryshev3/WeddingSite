@@ -110,7 +110,7 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Main Message */}
-        <div className="bg-[url('/images/background_image.webp')] bg-cover bg-center bg-no-repeat shadow-lg p-8 text-center relative min-h-[500px]">
+        <div style={{ color: '#1a1a1a' }} className="bg-[url('/images/background_image.webp')] bg-cover bg-center bg-no-repeat shadow-lg p-8 text-center relative min-h-[500px]">
           <div className="bg-white mx-8 md:mx-auto my-8 md:my-16 max-w-4xl p-8 rounded-2xl shadow-2xl relative z-10">
             {/* Invitation Text */}
             <div className="text-center">
@@ -186,7 +186,7 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Wedding Schedule */}
-        <div className="p-4 sm:p-8 overflow-x-hidden" style={{ backgroundColor: '#c4d8ed', color: '#1a1a1a' }}>
+        <div className="p-4 sm:p-8 overflow-x-hidden" style={{ backgroundColor: '#e3d8f1', color: '#1a1a1a' }}>
           <h2 className="text-3xl sm:text-4xl font-TildaScriptRegular mb-6 text-center">Свадебное расписание</h2>
 
           <div className="space-y-4 max-w-2xl mx-auto">
