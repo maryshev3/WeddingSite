@@ -83,7 +83,7 @@ const WeddingInvitation = () => {
 
               {/* Countdown */}
               <div className="mb-8">
-                <div className="flex justify-center gap-16 flex-wrap">
+                <div className="flex justify-center gap-4 sm:gap-16 flex-wrap">
                   {Object.entries(timeLeft).map(([unit, value]) => {
                     // Русские названия
                     const labels = {
@@ -176,6 +176,7 @@ const WeddingInvitation = () => {
             className="block mx-auto"
             src="https://forms.yandex.ru/u/696a1f92e010db2c0342596e?iframe=1"
             frameborder="0"
+            width="80%"
             name="ya-form-696a1f92e010db2c0342596e"
             height="1150" />
         </div>
@@ -191,20 +192,25 @@ const WeddingInvitation = () => {
           <div className="space-y-4 max-w-2xl mx-auto">
             {[
               { time: '14:30', event: 'Сбор гостей' },
-              { time: '15:00', event: 'Торжественная регистрация (Парк, под открытым небом около банкетного зала "Селебрити")' },
-              { time: '16:00', event: 'Фуршет (В это время молодожёны уходят на фотосессию)' },
+              { time: '15:00', event: 'Торжественная регистрация', note: 'Парк, под открытым небом около банкетного зала "Селебрити"' },
+              { time: '16:00', event: 'Фуршет', note: 'В это время молодожёны уходят на фотосессию' },
               { time: '17:30', event: 'Банкет' },
               { time: '21:00', event: 'Торт' },
               { time: '23:00', event: 'Завершение' }
             ].map((item, index) => (
-              <div key={index} className="flex items-start gap-16 p-4">
+              <div key={index} className="flex items-start gap-4 sm:gap-16 p-4">
                 <div className="flex-shrink-0 w-20 min-w-20">
                   {item.time && (
                     <span className="text-2xl font-CormorantInfantBold block text-left">{item.time}</span>
                   )}
                 </div>
                 <div className="flex-1">
-                  <span className="text-2xl font-CormorantInfantBold">{item.event}</span>
+                  <span className="text-2xl font-CormorantInfantBold block">{item.event}</span>
+                  {item.note && (
+                    <span className="text-lg font-CormorantInfantLite text-gray-700 block mt-1">
+                      {item.note}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
