@@ -57,11 +57,6 @@ const WeddingInvitation = () => {
             
             {/* Блок Андрея с сердечком вверху */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
-              <img 
-                src="images/heart_new.png" 
-                alt="Сердечко" 
-                className="absolute w-12 h-12 -left-20 top-4 z-20"
-              />
               <img src="images/man_child.png" alt="Андрей" className="w-60 h-60"/>
               <p className="text-4xl mt-4 font-TildaScriptRegular">Андрей</p>
             </div>
@@ -72,11 +67,6 @@ const WeddingInvitation = () => {
             
             {/* Блок Элеоноры с сердечком внизу */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
-              <img 
-                src="images/heart_new.png" 
-                alt="Сердечко" 
-                className="absolute w-12 h-12 -right-20 bottom-4 z-20"
-              />
               <img src="images/girl_child.png" alt="Элеонора" className="w-60 h-60"/>
               <p className="text-4xl mt-4 font-TildaScriptRegular">Элеонора</p>
             </div>
@@ -187,7 +177,6 @@ const WeddingInvitation = () => {
             src="https://forms.yandex.ru/u/696a1f92e010db2c0342596e?iframe=1"
             frameborder="0"
             name="ya-form-696a1f92e010db2c0342596e"
-            width="80%"
             height="1150" />
         </div>
 
@@ -231,10 +220,10 @@ const WeddingInvitation = () => {
             {/* Замени этот iframe на свой! */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.41766415306608!2d48.02373484140364!3d46.35040781322402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90f7e2c047bcb%3A0xde59bea91d0f0475!2z0J7RgdC60LDRgCwg0JrQsNGE0LU!5e0!3m2!1sru!2sru!4v1768333509684!5m2!1sru!2sru"
-              width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
+              width="100%"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Свадьба Андрея и Элеоноры"
