@@ -43,3 +43,16 @@
 body {
   overflow-x: hidden;
 }
+
+/* Гарантируем, что ничего не вылезет */
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  word-break: break-word;
+  overflow-wrap: anywhere; /* ← это ключевой стиль для современных браузеров */
+}
