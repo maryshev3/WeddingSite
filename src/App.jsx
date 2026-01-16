@@ -186,7 +186,7 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Wedding Schedule */}
-        <div className="p-8" style={{ backgroundColor: '#e3d8f1' }}>
+        <div className="p-4 sm:p-8 overflow-x-hidden" style={{ backgroundColor: '#e3d8f1' }}>
           <h2 className="text-4xl font-TildaScriptRegular mb-6 text-center">Свадебное расписание</h2>
 
           <div className="space-y-4 max-w-2xl mx-auto">
@@ -201,7 +201,9 @@ const WeddingInvitation = () => {
               <div key={index} className="flex items-start gap-4 sm:gap-16 p-4">
                 <div className="flex-shrink-0 w-20 min-w-20">
                   {item.time && (
-                    <span className="text-2xl font-CormorantInfantBold block text-left">{item.time}</span>
+                    <span className="text-2xl font-CormorantInfantBold block text-right">
+                      {item.time}
+                    </span>
                   )}
                 </div>
                 <div className="flex-1">
@@ -218,22 +220,23 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Map */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 overflow-hidden">
           <h3 className="text-4xl font-CormorantInfantBold text-center mb-6">
             Где нас найти?
           </h3>
           <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-            {/* Замени этот iframe на свой! */}
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.41766415306608!2d48.02373484140364!3d46.35040781322402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90f7e2c047bcb%3A0xde59bea91d0f0475!2z0J7RgdC60LDRgCwg0JrQsNGE0LU!5e0!3m2!1sru!2sru!4v1768333509684!5m2!1sru!2sru"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              width="100%"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Свадьба Андрея и Элеоноры"
-            ></iframe>
+            <div className="w-full max-w-full overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.41766415306608!2d48.02373484140364!3d46.35040781322402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90f7e2c047bcb%3A0xde59bea91d0f0475!2z0J7RgdC60LDRgCwg0JrQsNGE0LU!5e0!3m2!1sru!2sru!4v1768333509684!5m2!1sru!2sru"
+                width="100%"
+                height="400"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Свадьба Андрея и Элеоноры"
+              ></iframe>
+            </div>
           </div>
           <p className="text-center text-2xl font-CormorantInfantLite mt-4">
             Банкетный зал "Селебрити", Энзелийская ул., 1а
