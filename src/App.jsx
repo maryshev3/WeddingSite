@@ -220,27 +220,29 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Map */}
-        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 overflow-hidden">
-          <h3 className="text-4xl font-CormorantInfantBold text-center mb-6">
+        <div className="w-full overflow-hidden px-4 sm:px-6 py-6 bg-white">
+          <h3 className="text-4xl font-CormorantInfantBold text-center mb-6 max-w-2xl mx-auto">
             Где нас найти?
           </h3>
-          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-            <div className="w-full max-w-full overflow-hidden">
+          
+          <div className="max-w-2xl mx-auto w-full">
+            <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.41766415306608!2d48.02373484140364!3d46.35040781322402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90f7e2c047bcb%3A0xde59bea91d0f0475!2z0J7RgdC60LDRgCwg0JrQsNGE0LU!5e0!3m2!1sru!2sru!4v1768333509684!5m2!1sru!2sru"
                 width="100%"
-                height="400"
-                style={{ border: 0, display: 'block' }}
+                height="300"
+                style={{ border: 0, display: 'block', minHeight: '300px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Свадьба Андрея и Элеоноры"
               ></iframe>
             </div>
+            
+            <p className="text-center text-xl sm:text-2xl font-CormorantInfantLite mt-4 max-w-2xl mx-auto">
+              Банкетный зал "Селебрити", Энзелийская ул., 1а
+            </p>
           </div>
-          <p className="text-center text-2xl font-CormorantInfantLite mt-4">
-            Банкетный зал "Селебрити", Энзелийская ул., 1а
-          </p>
         </div>
       </div>
     </div>
