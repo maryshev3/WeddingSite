@@ -57,7 +57,7 @@ const WeddingInvitation = () => {
             
             {/* Блок Андрея с сердечком вверху */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
-              <img src="images/man_child.png" alt="Андрей" className="w-60 h-60"/>
+              <img src="images/man_child.jpg" alt="Андрей" className="w-60 h-60"/>
               <p className="text-3xl sm:text-4xl mt-4 font-TildaScriptRegular">Андрей</p>
             </div>
             
@@ -67,7 +67,7 @@ const WeddingInvitation = () => {
             
             {/* Блок Элеоноры с сердечком внизу */}
             <div className="text-center bg-white pt-6 pr-6 pl-6 pb-4 relative z-10">
-              <img src="images/girl_child.png" alt="Элеонора" className="w-60 h-60"/>
+              <img src="images/girl_child.jpg" alt="Элеонора" className="w-60 h-60"/>
               <p className="text-3xl sm:text-4xl mt-4 font-TildaScriptRegular">Элеонора</p>
             </div>
             
